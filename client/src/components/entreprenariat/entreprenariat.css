@@ -1,0 +1,130 @@
+.entreprenariat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 5rem 8rem;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.entreprenariatTitle{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+}
+.entreprenariatTitle > h1{
+    color: var(--white);
+    font-size: 60px;
+    font-weight: 700;
+}
+.entreprenariatContent{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+    gap: 5rem;
+}
+.entCard{
+    position: relative;
+    display: grid;
+    width: 75%;
+    height: 15rem;
+    border: 1px solid white;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(7,1fr);
+    grid-template-areas: 
+    "a a a a a a a a"
+    ". . . . . . . ."
+    ". c c c c c c ."
+    ". c c c c c c ."
+    ". c c c c c c ."
+    ". . . . . . . ."
+    "b b b . . . . .";
+    padding: 1rem 0;
+}
+.entCard::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/genesisBlock.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
+.entNames{
+    display: flex;
+    grid-area: a;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.entInfos{
+    display: flex;
+    flex-direction: column;
+    grid-area: c;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.entNumeroSiren{
+    display: flex;
+    grid-area: b;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.entNames > p,
+.entInfos > p,
+.entNumeroSiren > p{
+    z-index: 10;
+    color: rgba(195, 195, 195, 0.911);
+    font-size: 25px;
+    font-weight: 500;
+}
+
+@media (max-width: 780px) {
+    .entreprenariatTitle > h1{
+        font-size: 40px;
+        font-weight: 900;
+    }
+    .entCard{
+        width: 100%;
+    }
+    .entreprenariatContent{
+        width: 100%;
+    }
+    .entNames > p,
+    .entInfos > p,
+    .entNumeroSiren > p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 450px){
+    .entreprenariatTitle > h1{
+        font-size: 30px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+    }
+    .entreprenariat{
+        padding: 0;
+    }
+    
+    .entreprenariatContent{
+        width: 95%;
+    }
+    .entCard{
+        height: 10rem;
+    }
+    .entNames > p,
+    .entInfos > p,
+    .entNumeroSiren > p{
+        font-size: 15px;
+    }
+}

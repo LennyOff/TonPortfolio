@@ -1,0 +1,163 @@
+.about{
+    width: 100vw;
+    padding: 0;
+}
+
+.aboutContent{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5rem 8rem;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.contentTitle{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+}
+.contentTitle > h1{
+    color: var(--white);
+    font-size: 60px;
+    font-weight: 700;
+}
+.contentCards{
+    position: relative;
+    display: flex;
+    width: 60rem;
+    height: 20rem;
+    border: 1px solid white;
+}
+.contentCards::before{
+    background-image: url('../../assets/chart.jpg');
+    background-size: 60rem 20rem;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.05;
+    display: inline-block;
+    width: 60rem; 
+    height: 20rem;
+    content:"";
+}
+.stratCard{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.stratCard:nth-child(2){
+    border-right:1px solid white;
+    border-left:1px solid white;
+}
+.stratTitle{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0px;
+    padding: 0px 2rem;
+}
+.stratTitleText{
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 600;
+    width: 50%;
+}
+.stratCard:nth-child(1) .stratTitleText::after{
+    display: flex;
+    position: absolute;
+    top: 25px;
+    z-index: -1;
+    content:'';
+    height: 10px;
+    width: 65px;
+    background-color: red;
+}
+.stratCard:nth-child(2) .stratTitleText::after{
+    display: flex;
+    position: absolute;
+    top: 25px;
+    z-index: -1;
+    content:'';
+    height: 10px;
+    width: 75px;
+    background-color: green;
+}
+.stratCard:nth-child(3) .stratTitleText::after{
+    display: flex;
+    position: absolute;
+    top: 25px;
+    z-index: -1;
+    content:'';
+    height: 10px;
+    width: 125px;
+    background-color: blue;
+}
+.stratDescription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0px;
+    padding: 0px 2rem;
+    width: 100%;
+}
+.stratDescriptionText{
+    color: var(--small-text);
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 780px){
+    .contentTitle > h1{
+        font-size: 40px;
+        font-weight: 900;
+    }
+    .contentCards{
+        flex-direction: column;
+        width: 20rem;
+        height: 60rem;
+    }
+    .contentCards::before{
+        background-size: 20rem 60rem;
+        width: 20rem; 
+        height: 45rem;
+    }
+    .stratCard:nth-child(2){
+        border-top:1px solid white;
+        border-bottom:1px solid white;
+    }
+}
+
+@media (max-width: 450px){
+    .aboutContent{
+        padding: 0;
+    }
+    .contentTitle > h1{
+        font-size: 30px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+    }
+    .stratTitleText{
+        font-size: 25px;
+    }
+    .stratCard:nth-child(1) .stratTitleText::after{
+        height: 5px;
+        width: 50px;
+    }
+    .stratCard:nth-child(2) .stratTitleText::after{
+        height: 5px;
+        width: 55px;
+    }
+    .stratCard:nth-child(3) .stratTitleText::after{
+        height: 5px;
+        width: 90px;
+    }
+}

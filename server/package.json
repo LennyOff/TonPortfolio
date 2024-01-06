@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "copy-client": "xcopy /E /I ..\\client\\dist .\\dist",
+    "build-client-and-copy": "cd ../client && npm install && npm run build && cd ../server && npm run copy-client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.8",
+    "nodemon": "^3.0.2",
+    "path": "^0.12.7"
+  }
+}

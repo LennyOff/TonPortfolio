@@ -1,0 +1,126 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-attachment: scroll;
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgba(22,22,22,1) 30%);
+    background-attachment: fixed;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.background{
+    width: 100vw;
+}
+.backgroundColors{
+    display: flex;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.websiteContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.Color1{
+    display: flex;
+    position:absolute;
+    clip-path: polygon(46% 0, 61% 24%, 61% 100%, 0 48%, 0 0);
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 20%;
+    background-color: #101010;
+    z-index: -10;
+}
+.Color2{
+    display: flex;
+    position:absolute;
+    clip-path: polygon(79% 13%, 100% 0, 100% 84%, 46% 100%, 34% 38%);
+    top: 20%;
+    right: 0;
+    width: 800px;
+    height: 20%;
+    background-color:#282828;
+    z-index: -10;
+}
+.Color3{
+    display: flex;
+    position:absolute;
+    clip-path: polygon(46% 59%, 69% 58%, 55% 100%, 0 100%, 0 22%);
+    top: 40%;
+    left: 0;
+    width: 800px;
+    height: 20%;
+    background-color:	#383838;
+    z-index: -10;
+}
+.Color4{
+    display: flex;
+    position:absolute;
+    clip-path: polygon(45% 0, 100% 0, 100% 100%, 47% 100%, 31% 55%);
+    top: 60%;
+    right: 0;
+    width: 800px;
+    height: 20%;
+    background-color:#101010;
+    z-index: -10;
+}
+.Color5{
+    display: flex;
+    position:absolute;
+    clip-path: polygon(31% 26%, 40% 60%, 100% 100%, 0 100%, 0 45%);
+    top: 80%;
+    left: 0;
+    width: 800px;
+    height: 20%;
+    background-color:#000000;
+    z-index: -10;
+}
+
+@media (max-width: 780px) {
+    .Color1{
+        width: 600px;   
+    }
+    .Color2{
+        width: 600px;   
+    }
+    .Color3{
+        width: 600px;   
+    }
+    .Color4{
+        width: 600px;   
+    }
+    .Color5{
+        width: 600px;   
+    }
+}
+
+@media (max-width: 450px) {
+    .Color1{
+        width: 250px;   
+    }
+    .Color2{
+        width: 250px;   
+    }
+    .Color3{
+        width: 250px;   
+    }
+    .Color4{
+        width: 250px;   
+    }
+    .Color5{
+        width: 250px;   
+    }
+    .websiteContainer{
+        gap: 25px;
+    }
+}
