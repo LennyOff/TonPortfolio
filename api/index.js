@@ -2,7 +2,7 @@ const dotenv = require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const sendEmail = require("./api/SendEmail");
+const sendEmail = require("./utils/SendEmail");
 const path = require("path");
 
 const app = express()
@@ -22,7 +22,7 @@ app.get('/about', (req, res) => {
   res.send('This is my about route..... ')
 })
 
-app.post("/api/sendemail", async (req, res) => {
+app.post("/utils/sendemail", async (req, res) => {
     const { email, message, name } = req.body;
   
     try {
