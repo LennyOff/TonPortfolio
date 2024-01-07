@@ -18,7 +18,7 @@ const Contact = () => {
         };
     
         const response = await axios.post(
-          "https://ton-portfolio-server.vercel.app/api/sendemail",
+          "https://localhost:3000/api/sendemail",
           data
         );
         console.log(response.data);
