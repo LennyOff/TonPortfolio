@@ -4,8 +4,8 @@
       { "src": "./server/index.js", "use": "@vercel/node" }
     ],
     "routes": [
-      { "src": "/api/sendemail", "dest": "/index.js" },
-      { "src": "/(.*)", "dest": "/index.js" }
+      { "src": "/api/sendemail", "dest": "/server/index.js" },
+      { "src": "/(.*)", "dest": "/server/index.js" }
     ]
   }
   
