@@ -13,11 +13,11 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Serve static files from the Vite build
-app.use('/client', express.static(path.join(__dirname, "dist")));
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 // Route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
 app.post("/api/sendemail", async (req, res) => {
