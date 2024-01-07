@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "copy-client": "xcopy /E /I ..\\client\\dist .\\dist",
-    "build-client-and-copy": "cd ../client && npm install && npm run build && cd ../server && npm run copy-client"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
