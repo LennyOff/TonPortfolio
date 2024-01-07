@@ -12,12 +12,14 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 
-// Serve static files from the Vite build
-app.use(express.static(path.join(__dirname, "../client/dist")));
+// Commentez ou supprimez la ligne suivante pour désactiver la gestion des fichiers statiques du client
+// app.use('/client', express.static(path.join(__dirname, "dist")));
 
 // Route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
+  // Commentez ou supprimez la ligne suivante pour désactiver l'envoi du fichier index.html
+  // res.sendFile(path.join(__dirname, "dist", "index.html"));
+  res.send("Hello, Server!"); // Envoyez simplement une réponse pour tester le serveur sans le client
 });
 
 app.post("/api/sendemail", async (req, res) => {
