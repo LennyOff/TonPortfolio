@@ -23,6 +23,7 @@ const Contact = () => {
         );
         console.log(response.data);
     };
+    
 
   return (
     <div className='contact'>
