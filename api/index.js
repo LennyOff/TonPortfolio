@@ -15,11 +15,9 @@ app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `)
 })
 
-app.get("/api/hello/", (req, res) => {
-  res.json({
-      message: "Hello World"
-  });
-});
+app.get('/', (req, res) => {
+  res.send(`Hey this is my API running 🥳 on port ${PORT}`)
+})
 
 app.post("/utils/sendemail", async (req, res) => {
     const { email, message, name } = req.body;
@@ -36,4 +34,4 @@ app.post("/utils/sendemail", async (req, res) => {
     } catch (error) {
       res.status(500).json(error.message);
     }
-  });
+});
