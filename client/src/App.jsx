@@ -1,6 +1,6 @@
 
 import './App.css'
-import {Hero,About,Header,Contact,Entreprenariat,Projets} from './components/index'
+import {Hero,About,Header,Entreprenariat,Projets} from './components/index'
 import { motion } from "framer-motion";
 import { staggerContainer } from './utils/motion';
 
@@ -22,7 +22,7 @@ function App() {
             <About/>
             <Entreprenariat/>
             <Projets/>
-            <Contact/>
+            {/* <Contact/> */}
           </motion.div>
           <div className='Color1'></div>
           <div className='Color2'></div>
