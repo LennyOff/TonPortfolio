@@ -15,11 +15,11 @@ app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `)
 })
 
-app.get('/api/hello', (req, res) => {
+app.get("/api/hello/", (req, res) => {
   res.json({
-    message: "Hello World"
+      message: "Hello World"
   });
-})
+});
 
 app.post("/utils/sendemail", async (req, res) => {
     const { email, message, name } = req.body;
